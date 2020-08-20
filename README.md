@@ -2,7 +2,7 @@
 <h1 align="center">𝕜𝕚𝕥𝕥𝕪𝕡𝕪</h1><br>
 <h4 align="center">A light, simple game engine for ASCII graphic games. Create your own console games easily!<br>
 Complete with scene manager and switcher, 'collision' detection (with a char, point, edge or box), character sprite switcher and movement manager, support for color, splash screen, in-game music and more.</h4><br>
-<h3 align="center">Alpha Released!</h3>
+
 <h3 align="center">How to use</h3>
 <ul><li>Download the whole repo and extract everything from the zip, making sure all of them are in the same folder.
   <li>Run kptest.py - it is a very simple example 'game' built on kittypy (it may take upto 3-5 seconds for first load, with subsequent load times being very short)</li>
