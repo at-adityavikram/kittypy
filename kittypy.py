@@ -1,4 +1,4 @@
-# kittypy version 1.0.0.0 | copyright at-adityavikram | made in python heaven
+# kittypy version 1.2.0.5 | copyright at-adityavikram | made in python heaven
 
 #imports
 import os
@@ -300,7 +300,7 @@ def move_to(point,speed=100):#movement
         wait(1/speed)
     location[0],location[1] = point[0],point[1]
 
-def show_splash(scn,dly=2):#show the splash screen
+def show_splash(scn,dly=2,res=Image.ANTIALIAS):#show the splash screen
     try:
         img = Image.open(scn)
     except FileNotFoundError:
@@ -308,7 +308,7 @@ def show_splash(scn,dly=2):#show the splash screen
     h = height
     w = int((img.width / img.height) * h)
     h = h//2
-    img = img.resize((w,h), Image.ANTIALIAS)
+    img = img.resize((w,h), res)
     img_arr = np.asarray(img)
     h,w,c = img_arr.shape
     for x in range(h):
@@ -332,6 +332,18 @@ def dialogue(txt='sample text'):#HAS BUGS DO NOT USE
         dlg += styles[8] + i + " "*(width - 4 - len(i)) + styles[11] + "\n"
     dlg += styles[12] + styles[13]*(width-4) + styles[15]
     overlay(dlg.split("\n"))
+
+def gty(wt,cj):
+    while location[1] <= width - len(sprites[cursp]) and cj:
+        try:
+            teleport([location[0],location[1]+1])
+            wait(wt)
+        except:
+            print("err")
+
+def gravity(spd=2,cj=True):
+    oth = Thread(target=gty, args=(1/spd,cj,))
+    oth.start()
 
 if __name__ == '__main__':#internal
     os.system("mode con lines=50")
