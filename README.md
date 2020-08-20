@@ -5,7 +5,7 @@ Complete with scene manager and switcher, 'collision' detection (with a char, po
 
 <h3 align="center">How to use</h3>
 <ul><li>Download the whole repo and extract everything from the zip, making sure all of them are in the same folder.
-  <li>Run kptest.py - it is a very simple example 'game' built on kittypy (it may take upto 3-5 seconds for first load, with subsequent load times being very short)</li>
+  <li>Run fbird.py - it is a very simple example 'game' built on kittypy (it may take upto 3-5 seconds for first load, with subsequent load times being very short)</li>
   <li>Test out the example, and try to build your own game. Remember to import kittypy!</li>
  </ul>
  <h3 align="center">Requirements</h3>
